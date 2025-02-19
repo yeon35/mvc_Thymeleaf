@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loginform</title>
+</head>
+<body>
+
+<!-- action은 목적지. 폼의 도착지
+    mothod는 전송방법. get은 url 뒤에 붙여서, post는 req body에 보내진다.-->
+<form action="/regres/login" method="post">
+    <!-- input은 폼 내부에서 데이터를 전송할 양식을 지정할 때 사용
+    name은 어떤 변수에 데이터를 담아서 보낼지 결정-->
+    <input type="text" name="id"></br>
+
+    <!-- pw = 블라블라 적히게 input 하나 더 작성-->
+    <input type="password" name="pw"></br>
+    <button>로그인하기</button>
+</form>
+
+</body>
+</html>

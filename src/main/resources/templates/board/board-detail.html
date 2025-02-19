@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>글 내용입니다.</H1>
+<h2>게시글 디테일 : <span th:text="${board}"></span></h2>
+<h3>글번호 : <span th:text="${board.boardNum}"></span></h3>
+<h3>글쓴이 : <span th:text="${board.writer}"></span></h3>
+<h3>글본문 : <span th:text="${board.content}"></span></h3>
+<h3>쓴시각 : <span th:text="${board.createdAt}"></span></h3>
+
+<!-- a태그를 이용해서 목록페이지로 돌아가는 링크 생성 -->
+<br><a th:href="@{'/board/list'}">목록으로</a></br>
+<br><form th:action="@{/board/delete}" method="post">
+    <input type="hidden" name="boardNum" th:value="${board.boardNum}">
+    <button>삭제하기</button>
+</form> </br>
+</body>
+</html>

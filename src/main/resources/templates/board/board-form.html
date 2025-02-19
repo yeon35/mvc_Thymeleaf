@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>게시물 작성 폼</h1>
+<form action="board-write" method="post">
+    글쓴이 : <input type="text" name="writer"><br>
+    본문 : <input type="text" name="content"><br>
+    <!-- 폼 양식에는 포함되지 않으나 숨겨서 보낼 값 지정
+    name이 boardNum, value가 0이므로 boardNum변수에 0을 보냄-->
+    <input type="hidden" name="boardNum" value="0">
+    <button>글쓰기</button>
+
+</form>
+
+</body>
+</html>

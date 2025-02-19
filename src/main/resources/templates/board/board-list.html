@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<H1>게시판 글 목록입니다.</H1>
+게시글 목록 : <span th:text="${boardList}"></span><br>
+
+<!-- .jsp 파일에서 boardList에 든 글 목록을 하나하나의 글로 바꿔서 화면에 표시.
+이때 jstl의 c:forEach를 사용
+var의 변수에 items의 리스트를 번갈아가면서 지정 -->
+
+<!-- 타임리프 반복 구문-->
+<div th:each="board : ${boardList}">
+    <h3>글번호 : <span th:text="${board.boardNum}"></span>,
+        글쓴이 : <span th:text="${board.writer}"></span>,
+        본문 : <span th:text="${board.content}"></span>,
+        게시시간 : <span th:text="${board.createdAt}"></span>
+        <a th:href="@{'/board/detail/' + ${board.boardNum}}">디테일 페이지로</a>
+    </h3>
+</div>
+
+<button><a th:href="@{'/board/write'}">글쓰기</a></button>
+
+
+</body>
+</html>
