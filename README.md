@@ -1,5 +1,5 @@
 ## 마이바티스를 활용한 블로그 생성 프로젝트
-## 오류이슈로 Thymeleaf 문법 사용
+## Thymeleaf 문법 사용
 ### 초기세팅
 
 ## vscode jsp template
